@@ -1,0 +1,675 @@
+.container{
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+// bg home
+
+.bg-home{
+    position: relative;
+}
+
+.bg-home::before{
+    content: '';
+    display: block;
+    position: absolute;
+    background-image: linear-gradient(to bottom, rgba(6, 18, 30, 0.1), rgb(0, 3, 51)), url("../assets/construction-287867_1920.jpg");
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    opacity: 0.9;
+}
+// ------------------------------
+
+// hero
+
+.hero{
+    color: $white-normal;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    padding: 14px;
+
+
+    .first-content-hero{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 100px;
+        gap: 40px;
+        width: 100%;
+        
+
+        img{
+            width: 300px;
+        }
+
+        h1{
+            width: 100%;
+            text-align: left;
+            line-height: 150%;
+            font-size: 44px;
+        }
+
+        
+    }
+}
+
+.button-contact{
+    text-align: center;
+    margin: 150px 0;
+
+    a{
+        padding: 22px 32px;
+        color: $white-normal;
+        background-color: $blue-normal;
+        border: 0;
+        font-size: 22px;
+        font-weight: 550;
+    }
+}
+
+.button-contact:hover{
+    
+    animation: scaleButton 0.8s alternate infinite;
+    
+}
+
+@keyframes scaleButton{
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.07);
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    
+    .hero{
+        padding: 0 30px;
+        .first-content-hero{
+            h1{
+                font-size: 34px;
+                text-align: left;
+
+            }
+        }
+    }
+
+    .button-contact{
+        margin-top: 140px;
+    }
+
+}
+
+@media screen and (max-width: 768px){
+
+    .first-content-hero{
+        flex-direction: column;
+        min-height: 60vh;
+    }
+
+    .hero{
+        .first-content-hero{
+            img{
+                width: 210px;
+            }
+
+            h1{
+                justify-content: center;
+                max-width: 600px;
+                font-size: 38px;
+                text-align: center;
+                width: 100%;
+
+            }
+        }
+    }
+
+    .button-contact{
+        margin-top: 60px;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .hero .first-content-hero h1{
+        font-size: 24px;
+    }
+
+}
+
+
+// ----------------------------------------------
+
+// ABOUT ----------------------------------------
+
+.about{
+    background-color: $primary-normal;
+    overflow: hidden;
+    color: $white-normal;
+}
+
+.about-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 0 0 150px;
+
+    img{
+        max-width: 900px;
+    }
+
+    .img-sobre{
+        height: 45vh;
+    }
+}
+    
+
+
+.about-description{
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    padding: 30px 30px 10px 30px;
+    background-color: $white-normal;
+    gap: 20px;
+    max-width: 550px;
+    margin-bottom: 30px;
+
+
+    h2{
+        color: $primary-dark;
+        font-size: 30px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+
+    p{
+        color: $primary-dark;
+        align-items: center;
+        justify-content: center;
+        line-height: 150%;
+        font-size: 20px;
+    }
+}
+
+
+@media screen and (max-width: 1630px){
+
+    .button-contact{
+        a{ 
+        font-size: 20px;
+        }
+    }
+
+    .about-content{
+
+        img{
+            width: 650px;
+        }
+
+        p{
+            font-size: 16px;
+        }
+
+        h2{
+            font-size: 24px;
+            margin-bottom: 0;
+        }
+        div{
+            flex: none;
+        }
+
+        .img-sobre{
+            height: 45vh;
+        }
+    }
+
+    .about-description{
+        max-width: 450px;
+    }
+}
+
+@media screen and (max-width: 1180px ){
+
+    .about-content{
+        margin: 0 auto;
+        padding: 0;
+
+        img{
+            display: none;
+      }
+    }
+
+    .button-contact{
+
+        a{
+        font-size: 24px;
+        }
+    }
+}
+
+@media screen and (max-width: 480px){
+
+    .about-description{
+        p{
+            font-size: 14px;
+        }
+        width: 300px;
+        margin: 0 0 20px 20px;
+
+
+    }
+}
+
+.slider-section{
+    background-color: $white-normal;
+    padding: 70px 0;
+}
+
+.slider{
+    margin: 0 auto;
+    width: 1350px;
+    height: 600px;
+    overflow: hidden;
+    box-shadow: 0px 16px 30px rgb(104, 104, 104);
+    border: 4px solid ;
+}
+
+.slides{
+    width: 400%;
+    height: 600px;
+    display: flex;
+}
+
+.slides input{
+    display: none;
+}
+
+.slide{
+    width: 25%;
+    position: relative;
+    transition: 2s;
+}
+
+.slide img{
+    width: 1350px;
+}
+
+.manual-navigation{
+    position: absolute;
+    width: 1350px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn{
+    border: 2px solid $white-normal;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+//menos no ultimo item
+.manual-btn:not(:last-child){
+    margin-right: 40px;
+}
+
+.manual-btn:hover{
+    background-color: $white-normal;
+}
+
+//quando o radio estiver ativo(marcado)
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+    margin-left: -25%;
+}
+
+#radio3:checked ~ .first{
+    margin-left: -50%;
+}
+
+#radio4:checked ~ .first{
+    margin-left: -75%;
+}
+
+.navigation-auto div{
+    border: 2px solid $blue-light;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.navigation-auto{
+    position: absolute;
+    width: 1350px;
+    margin-top: 560px;
+    display: flex;
+    justify-content: center;
+}
+
+.navigation-auto div:not(:last-child){
+    margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1{
+    background-color: $white-normal;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2{
+    background-color: $white-normal;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3{
+    background-color: $white-normal;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4{
+    background-color: $white-normal;
+}
+
+.slider-section{
+
+    h2{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        margin: 0 auto;
+        margin-bottom: 40px;
+        font-size: 32px;
+    }
+}
+
+@media screen and (max-width: 1420px){
+
+    .slider{
+        width: 1000px;
+        height: 500px;
+    }
+
+    .slides{
+        height: 500px;
+    }
+
+    .slide img{
+        width: 1000px;
+    }
+
+    .manual-navigation{
+        width: 1000px;
+        margin-top: -40px;
+    }
+
+    .navigation-auto{
+        width: 1000px;
+        margin-top: 460px;
+    }
+
+    
+}
+
+@media screen and (max-width: 1090px){
+
+    .slider{
+        width: 550px;
+        height: 350px;
+    }
+
+    .slides{
+        height: 350px;
+    }
+
+    .slide img{
+        width: 550px;
+    }
+
+    .manual-navigation{
+        width: 550px;
+        margin-top: -40px;
+    }
+
+    .navigation-auto{
+        width: 550px;
+        margin-top: 310px;
+    }
+
+    
+}
+
+@media screen and (max-width: 480px){
+
+    .slider-section{
+        h2{
+            font-size: 20px;
+        }
+    }
+    .slider{
+        width: 300px;
+        height: 200px;
+    }
+
+    .slides{
+        height: 200px;
+    }
+
+    .slide img{
+        width: 300px;
+    }
+
+    .manual-navigation{
+        width: 300px;
+        margin-top: -40px;
+    }
+
+    .navigation-auto{
+        width: 300px;
+        margin-top: 160px;
+    }
+
+}
+
+// ----------------------------------------------------
+
+.skill-icons{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+
+    h2{
+        margin: 50px 0 30px 0;
+        font-size: xx-large;
+        color: $white-normal;
+    }
+}
+
+.badges{
+    display: flex;
+    justify-content:center;
+    text-align: center;
+    margin: 0x 10px;
+    padding: 50px;
+    gap: 220px;
+
+    P{
+    color: $white-normal;
+    max-width: 110px;
+    margin: 0 auto;
+    }
+}
+
+.img-icons{
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+}
+
+.column1{
+    display: flex;
+    gap: 220px;
+}
+
+.column2{
+    display: flex;
+    gap: 220px;
+
+}
+
+.badge-icons{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    text-align: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 1280px) {
+    
+    .badges{
+        gap: 350px;
+    }
+
+    .column1{
+        flex-direction: column;
+    }
+
+    .column2{
+        flex-direction: column;
+    }
+
+    .img-icons{
+        width: 130px;
+        height: 130px;
+        margin: 0 auto;
+    }
+
+}
+
+@media screen and (max-width: 768px){
+
+    .badges{ 
+        gap: 180px;
+    }
+}
+
+@media screen and (max-width: 480px){
+
+    .skill-icons{
+        h2{
+            font-size: 24px;
+        }
+    }
+    .badges{
+        gap: 70px;
+    }
+    
+    .img-icons{
+        width: 80px;
+        height: 80px;
+        margin: 0 auto;
+    }
+
+}
+
+.services{
+    text-align: center;
+    justify-content: center;
+    padding:80px 0px 40px 0px;
+    background-color: $white-normal;
+    
+    h2{
+        font-size: 32px;
+        color: $primary-dark;
+    }
+}
+
+// -----------------------------------------
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 54px 0;
+    gap: 24px;
+    color: $white-normal;
+}
+
+.footer-flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.footer-contact {
+
+    h3::after{
+    content: '';
+    background-color: $white-normal;
+    width: 100%;
+    height: 1.5px;
+    display: block;
+    margin-bottom: 10px;
+    }
+
+}
+
+// ------------------------------------------
+
+.btn-whatsapp{
+    position: fixed;
+    bottom: 14px;
+    right: 24px;
+    z-index: 99;
+
+
+    img{
+    max-width: 74px;
+    transition: transform 0.4s;
+    }
+
+    img:hover{
+        transform: scale(1.1);
+    }
+}
+
+.btn-whatsapp .tooltip-text{
+    visibility: hidden;
+    position: absolute;   
+    width: 120px;
+    top: 18px;
+    left: -140px;
+    background-color: $secondary-dark;
+    color: $white-normal;
+    text-align: center;
+    border-radius: 8px;
+    padding: 6px;
+}
+
+.btn-whatsapp:hover .tooltip-text{
+    visibility: visible;
+    opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+    .btn-whatsapp{
+        img{
+            max-width: 64px;
+        }
+    }
+}

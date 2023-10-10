@@ -1,0 +1,48 @@
+header{
+    width: 100%;
+}
+
+.header-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+i{
+    color: $white-normal;
+    margin-top: 30px;
+}
+
+.header-icons{
+    display: flex;
+    gap: 22px;
+
+    i{
+        scale: 1.2;
+    }
+}
+
+.header-icons a:hover{
+    i{
+        animation: translateY 0.8s infinite alternate;
+        color: $blue-light;
+    }
+}
+
+@keyframes translateY {
+    from{
+        transform: translateY(0) scale(1);
+    }
+    to{
+        transform: translateY(-8px) scale(1.1);
+    }
+}
+
+@media screen and (max-width: 768px){
+
+    .header-content i{
+        margin-top: 42px;
+        width: 100%;
+        font-size: 38px;
+    }
+}
